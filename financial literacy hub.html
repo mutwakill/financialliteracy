@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfinance Foundation</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#1E40AF',secondary:'#3B82F6'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=A%20rural%20microfinance%20scene%20in%20Kassala%20State%2C%20Sudan.%20Show%20farmers%20and%20community%20members%20discussing%20financial%20opportunities.%20The%20image%20has%20a%20gradient%20from%20light%20blue%20on%20the%20left%20to%20a%20more%20detailed%20scene%20on%20the%20right.%20The%20left%20side%20is%20lighter%20and%20more%20subtle%20to%20allow%20text%20to%20be%20clearly%20visible%2C%20while%20the%20right%20side%20shows%20more%20detailed%20imagery%20of%20rural%20farming%20and%20microfinance%20activities.%20Natural%20lighting%2C%20warm%20tones%2C%20professional%20photography%20style.&width=1600&height=800&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .stats-counter {
+            background-image: url('https://readdy.ai/api/search-image?query=Abstract%20financial%20growth%20concept%20with%20subtle%20patterns%20and%20light%20blue%20gradient%20background.%20Minimalist%20design%20with%20geometric%20shapes%20suggesting%20progress%20and%20development.%20Professional%2C%20clean%20aesthetic%20suitable%20for%20financial%20services.%20Soft%20colors%20that%20wont%20distract%20from%20overlaid%20statistics%20and%20text.%20Modern%20business%20imagery%20with%20space%20for%20content.&width=1600&height=400&seq=2&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .success-stories {
+            background-image: url('https://readdy.ai/api/search-image?query=Subtle%20light%20pattern%20background%20with%20soft%20gradient%20from%20white%20to%20very%20light%20blue.%20Minimal%20design%20with%20abstract%20shapes%20suggesting%20growth%20and%20prosperity.%20Professional%20financial%20theme%20with%20clean%20lines%20and%20ample%20white%20space.%20Perfect%20for%20testimonial%20section%20background%20that%20wont%20compete%20with%20text%20content.%20Modern%2C%20airy%20design%20with%20subtle%20texture.&width=1600&height=600&seq=3&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-['Pacifico'] text-primary mr-10">logo</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-900 font-medium hover:text-primary transition">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">Training Hub</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">Blog</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">Events</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 w-48">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="px-4 py-2 text-primary border border-primary rounded-button hover:bg-primary/5 whitespace-nowrap text-sm font-medium">Log In</button>
+                    <button class="px-4 py-2 bg-primary text-white rounded-button hover:bg-primary/90 whitespace-nowrap text-sm font-medium">Register</button>
+                </div>
+                <div class="flex items-center space-x-2 border-l pl-4 ml-2">
+                    <button class="text-gray-600 hover:text-primary">EN</button>
+                    <span class="text-gray-300">|</span>
+                    <button class="text-gray-600 hover:text-primary">AR</button>
+                </div>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+            <div class="container mx-auto px-4 py-24 relative z-10">
+                <div class="w-full md:w-1/2 text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Empowering Communities Through Microfinance</h1>
+                    <p class="text-lg mb-8">Supporting farmers, youth, and cooperatives in Kassala State with financial services, training, and resources to build sustainable livelihoods.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 whitespace-nowrap">Apply for Funding</button>
+                        <button class="px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-button hover:bg-white/10 whitespace-nowrap">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Carousel -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Latest News</h2>
+                    <div class="flex space-x-2">
+                        <button id="prev-news" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </button>
+                        <button id="next-news" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-gray-100">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden">
+                    <div id="news-carousel" class="flex transition-transform duration-300 ease-in-out">
+                        <!-- News Item 1 -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                                <img src="https://readdy.ai/api/search-image?query=A%20community%20meeting%20in%20rural%20Sudan%20where%20farmers%20are%20gathered%20discussing%20microfinance%20opportunities.%20Natural%20lighting%2C%20professional%20photography%20showing%20diverse%20group%20of%20people%20engaged%20in%20conversation.%20The%20scene%20depicts%20knowledge%20sharing%20about%20financial%20services%20in%20a%20rural%20setting%20with%20traditional%20elements%20visible.&width=600&height=400&seq=4&orientation=landscape" alt="Community Meeting" class="w-full h-48 object-cover object-top">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-3">
+                                        <span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Community</span>
+                                        <span class="text-xs text-gray-500 ml-3">May 5, 2025</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2">New Microfinance Program Launches in Eastern Kassala</h3>
+                                    <p class="text-gray-600 mb-4">Our foundation has launched a new initiative targeting small-scale farmers with flexible loan options and business training...</p>
+                                    <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                        Read more
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 2 -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                                <img src="https://readdy.ai/api/search-image?query=A%20workshop%20scene%20showing%20youth%20entrepreneurs%20learning%20about%20financial%20literacy%20in%20Sudan.%20Professional%20photography%20with%20natural%20lighting%20showing%20diverse%20young%20people%20engaged%20in%20training.%20The%20setting%20is%20a%20modern%20classroom%20with%20financial%20education%20materials%20visible.%20Shows%20positive%2C%20engaged%20expressions%20as%20they%20learn%20about%20business%20skills.&width=600&height=400&seq=5&orientation=landscape" alt="Youth Workshop" class="w-full h-48 object-cover object-top">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-3">
+                                        <span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Training</span>
+                                        <span class="text-xs text-gray-500 ml-3">May 2, 2025</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2">Youth Financial Literacy Workshop Reaches 200 Participants</h3>
+                                    <p class="text-gray-600 mb-4">Our recent three-day workshop provided essential financial education to young entrepreneurs from across the region...</p>
+                                    <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                        Read more
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 3 -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                                <img src="https://readdy.ai/api/search-image?query=A%20woman%20farmer%20in%20Sudan%20examining%20crops%20in%20a%20field%2C%20showing%20the%20results%20of%20microfinance%20investment.%20Professional%20photography%20with%20natural%20lighting%20showing%20successful%20agricultural%20development.%20The%20image%20shows%20healthy%20crops%20and%20a%20confident%20female%20farmer%20inspecting%20her%20harvest.%20Rural%20setting%20with%20traditional%20farming%20elements%20visible.&width=600&height=400&seq=6&orientation=landscape" alt="Woman Farmer" class="w-full h-48 object-cover object-top">
+                                <div class="p-6">
+                                    <div class="flex items-center mb-3">
+                                        <span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Success Story</span>
+                                        <span class="text-xs text-gray-500 ml-3">April 28, 2025</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2">Women's Cooperative Doubles Crop Yield After Microfinance Support</h3>
+                                    <p class="text-gray-600 mb-4">The Al-Noor Women's Farming Cooperative has reported exceptional results following implementation of new techniques...</p>
+                                    <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                        Read more
+                                        <i class="ri-arrow-right-line ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Services -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">We provide comprehensive microfinance solutions tailored to the unique needs of communities in Kassala State.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
+                            <i class="ri-hand-coin-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Microloans for Farmers</h3>
+                        <p class="text-gray-600 mb-4">Flexible financing options designed specifically for agricultural needs, with seasonal repayment schedules aligned with harvest cycles.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
+                            <i class="ri-team-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Cooperative Development</h3>
+                        <p class="text-gray-600 mb-4">Support for establishing and strengthening community cooperatives, including governance training and collective purchasing power.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
+                            <i class="ri-graduation-cap-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Youth Entrepreneurship</h3>
+                        <p class="text-gray-600 mb-4">Specialized programs for young entrepreneurs, combining startup capital with business skills training and ongoing mentorship.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
+                            <i class="ri-women-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Women's Empowerment</h3>
+                        <p class="text-gray-600 mb-4">Dedicated financial services for women entrepreneurs, with additional support for childcare, healthcare, and business networking.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
+                            <i class="ri-book-open-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Financial Education</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive training programs on budgeting, saving, investment, and sustainable business practices for all community members.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6">
+                            <i class="ri-plant-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Sustainable Agriculture</h3>
+                        <p class="text-gray-600 mb-4">Specialized financing for climate-smart farming practices, water conservation technologies, and renewable energy solutions.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter -->
+        <section class="stats-counter py-20 relative">
+            <div class="absolute inset-0 bg-primary/80"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-white text-center">
+                    <div>
+                        <div class="text-4xl font-bold mb-2" id="counter-1">0</div>
+                        <p class="text-white/80">Families Supported</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2" id="counter-2">0</div>
+                        <p class="text-white/80">Microloans Disbursed</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2" id="counter-3">0</div>
+                        <p class="text-white/80">Training Sessions</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2" id="counter-4">0</div>
+                        <p class="text-white/80">Community Partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Real stories from individuals and communities who have transformed their lives through our microfinance programs.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Story 1 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <img src="https://readdy.ai/api/search-image?query=Portrait%20of%20a%20confident%20middle-aged%20Sudanese%20farmer%20standing%20in%20his%20field%2C%20wearing%20traditional%20clothing.%20Professional%20photography%20with%20natural%20lighting%20showing%20a%20successful%20agricultural%20entrepreneur.%20The%20background%20shows%20healthy%20crops.%20The%20subject%20has%20a%20proud%20expression%20showing%20dignity%20and%20accomplishment.&width=300&height=300&seq=7&orientation=squarish" alt="Ibrahim's Story" class="w-full md:w-40 h-40 object-cover object-top rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Ibrahim's Sorghum Revolution</h3>
+                            <p class="text-gray-600 mb-4">After receiving a microloan of $750, Ibrahim was able to invest in drought-resistant sorghum seeds and a small irrigation system. Within two growing seasons, he increased his yield by 300% and has now expanded to employ three other community members.</p>
+                            <div class="flex items-center">
+                                <span class="text-primary font-medium">Ibrahim Mahmoud</span>
+                                <span class="mx-2 text-gray-400">|</span>
+                                <span class="text-gray-600">Farmer, Aroma District</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Story 2 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <img src="https://readdy.ai/api/search-image?query=Portrait%20of%20a%20confident%20young%20Sudanese%20woman%20entrepreneur%20in%20her%20small%20shop%2C%20wearing%20colorful%20traditional%20clothing.%20Professional%20photography%20with%20natural%20lighting%20showing%20a%20successful%20business%20owner.%20The%20background%20shows%20her%20well-organized%20retail%20space.%20The%20subject%20has%20a%20welcoming%20smile%20showing%20pride%20in%20her%20accomplishment.&width=300&height=300&seq=8&orientation=squarish" alt="Amina's Story" class="w-full md:w-40 h-40 object-cover object-top rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Amina's Textile Cooperative</h3>
+                            <p class="text-gray-600 mb-4">Starting with just three sewing machines and a group of five women, Amina's cooperative accessed financing to purchase materials in bulk. Today, their textiles are sold in markets across eastern Sudan, and the cooperative has grown to include 23 women.</p>
+                            <div class="flex items-center">
+                                <span class="text-primary font-medium">Amina Osman</span>
+                                <span class="mx-2 text-gray-400">|</span>
+                                <span class="text-gray-600">Cooperative Leader, Kassala City</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Story 3 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <img src="https://readdy.ai/api/search-image?query=Portrait%20of%20a%20young%20Sudanese%20man%20in%20his%20early%2020s%20standing%20next%20to%20his%20small%20mobile%20repair%20shop.%20Professional%20photography%20with%20natural%20lighting%20showing%20a%20successful%20young%20entrepreneur.%20The%20background%20shows%20his%20well-equipped%20tech%20repair%20space.%20The%20subject%20has%20a%20confident%20expression%20showing%20pride%20in%20his%20business%20achievement.&width=300&height=300&seq=9&orientation=squarish" alt="Mohammed's Story" class="w-full md:w-40 h-40 object-cover object-top rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Mohammed's Tech Repair Business</h3>
+                            <p class="text-gray-600 mb-4">At just 22 years old, Mohammed used his youth entrepreneurship loan to open a mobile phone repair shop. After completing our technical training program, he now services over 200 devices monthly and has hired two apprentices from his community.</p>
+                            <div class="flex items-center">
+                                <span class="text-primary font-medium">Mohammed Ali</span>
+                                <span class="mx-2 text-gray-400">|</span>
+                                <span class="text-gray-600">Young Entrepreneur, New Halfa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Story 4 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <img src="https://readdy.ai/api/search-image?query=Portrait%20of%20a%20group%20of%20diverse%20Sudanese%20farmers%20standing%20together%20near%20their%20community%20water%20project.%20Professional%20photography%20with%20natural%20lighting%20showing%20successful%20community%20cooperation.%20The%20background%20shows%20irrigation%20equipment%20and%20healthy%20fields.%20The%20subjects%20have%20proud%20expressions%20showing%20collective%20achievement.&width=300&height=300&seq=10&orientation=squarish" alt="Wad Al-Hilew Cooperative" class="w-full md:w-40 h-40 object-cover object-top rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Wad Al-Hilew Irrigation Cooperative</h3>
+                            <p class="text-gray-600 mb-4">Facing persistent water shortages, 17 farming families formed a cooperative to install a shared solar-powered irrigation system. With financing and technical support from our foundation, crop yields have increased by 70% across all member farms.</p>
+                            <div class="flex items-center">
+                                <span class="text-primary font-medium">Wad Al-Hilew Cooperative</span>
+                                <span class="mx-2 text-gray-400">|</span>
+                                <span class="text-gray-600">Rural Kassala</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="px-6 py-3 bg-primary text-white font-medium rounded-button hover:bg-primary/90 whitespace-nowrap">View All Success Stories</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Hub Preview -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Training Hub</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Access our library of educational resources designed to build financial literacy and business skills.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Training Resource 1 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=A%20training%20session%20on%20financial%20literacy%20in%20Sudan.%20Professional%20photography%20showing%20a%20workshop%20setting%20with%20a%20presenter%20using%20visual%20aids%20to%20explain%20financial%20concepts.%20The%20audience%20is%20diverse%20and%20engaged%2C%20taking%20notes.%20Educational%20materials%20and%20charts%20are%20visible%20in%20the%20background.&width=600&height=400&seq=11&orientation=landscape" alt="Financial Basics Workshop" class="w-full h-48 object-cover object-top">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <button class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
+                                    <i class="ri-play-fill text-primary text-3xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Video</span>
+                                <span class="text-xs text-gray-500 ml-3">45 minutes</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Financial Basics Workshop</h3>
+                            <p class="text-gray-600 mb-4">Learn the fundamentals of personal finance, including budgeting, saving, and understanding credit in this comprehensive introduction.</p>
+                            <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                Watch video
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Resource 2 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=A%20business%20planning%20session%20in%20Sudan%20with%20entrepreneurs%20working%20on%20documents.%20Professional%20photography%20showing%20people%20collaborating%20on%20business%20plans%20with%20calculators%20and%20paperwork.%20The%20setting%20shows%20a%20productive%20working%20environment%20with%20good%20lighting.%20Participants%20are%20engaged%20in%20serious%20business%20planning%20activities.&width=600&height=400&seq=12&orientation=landscape" alt="Business Plan Development" class="w-full h-48 object-cover object-top">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-white/90 text-gray-700 text-xs font-medium px-3 py-1 rounded-full flex items-center">
+                                    <i class="ri-file-pdf-line mr-1"></i>
+                                    PDF Guide
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Guide</span>
+                                <span class="text-xs text-gray-500 ml-3">32 pages</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Business Plan Development</h3>
+                            <p class="text-gray-600 mb-4">A step-by-step guide to creating a comprehensive business plan, including market analysis, financial projections, and implementation strategy.</p>
+                            <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                Download PDF
+                                <i class="ri-download-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Training Resource 3 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                        <div class="relative">
+                            <img src="https://readdy.ai/api/search-image?query=An%20agricultural%20training%20session%20in%20rural%20Sudan%20showing%20farmers%20learning%20modern%20techniques.%20Professional%20photography%20with%20natural%20lighting%20showing%20knowledge%20transfer%20about%20sustainable%20farming%20methods.%20The%20setting%20shows%20practical%20demonstration%20with%20crops%20and%20farming%20tools.%20Participants%20are%20engaged%20in%20hands-on%20learning%20activities.&width=600&height=400&seq=13&orientation=landscape" alt="Agricultural Best Practices" class="w-full h-48 object-cover object-top">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                                <button class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
+                                    <i class="ri-play-fill text-primary text-3xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Series</span>
+                                <span class="text-xs text-gray-500 ml-3">6 modules</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Agricultural Best Practices</h3>
+                            <p class="text-gray-600 mb-4">Comprehensive training on sustainable farming techniques, crop selection, pest management, and maximizing yield in local conditions.</p>
+                            <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                                Start learning
+                                <i class="ri-arrow-right-line ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="px-6 py-3 bg-primary text-white font-medium rounded-button hover:bg-primary/90 whitespace-nowrap">Explore Training Hub</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Join us for workshops, information sessions, and community gatherings across Kassala State.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-primary/10 rounded p-2 text-center mr-4">
+                                    <div class="text-primary font-bold text-xl">15</div>
+                                    <div class="text-primary text-sm">May</div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-1">Women in Business Forum</h3>
+                                    <p class="text-gray-600">9:00 AM - 3:00 PM</p>
+                                    <div class="flex items-center mt-2 text-gray-600 text-sm">
+                                        <i class="ri-map-pin-line mr-1"></i>
+                                        <span>Kassala Community Center</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">A networking and skill-building event for women entrepreneurs, featuring success stories, panel discussions, and opportunities to connect with mentors.</p>
+                            <button class="w-full py-2 border border-primary text-primary rounded-button hover:bg-primary/5 whitespace-nowrap font-medium">Register Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-primary/10 rounded p-2 text-center mr-4">
+                                    <div class="text-primary font-bold text-xl">22</div>
+                                    <div class="text-primary text-sm">May</div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-1">Agricultural Finance Workshop</h3>
+                                    <p class="text-gray-600">10:00 AM - 2:00 PM</p>
+                                    <div class="flex items-center mt-2 text-gray-600 text-sm">
+                                        <i class="ri-map-pin-line mr-1"></i>
+                                        <span>Rural Development Center, Aroma</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Learn about specialized financing options for farmers, including seasonal loans, equipment financing, and cooperative funding models.</p>
+                            <button class="w-full py-2 border border-primary text-primary rounded-button hover:bg-primary/5 whitespace-nowrap font-medium">Register Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-primary/10 rounded p-2 text-center mr-4">
+                                    <div class="text-primary font-bold text-xl">29</div>
+                                    <div class="text-primary text-sm">May</div>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-1">Youth Entrepreneurship Day</h3>
+                                    <p class="text-gray-600">9:00 AM - 5:00 PM</p>
+                                    <div class="flex items-center mt-2 text-gray-600 text-sm">
+                                        <i class="ri-map-pin-line mr-1"></i>
+                                        <span>Kassala Technical College</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">A full-day event for young entrepreneurs featuring business plan competitions, skill-building workshops, and networking with potential investors.</p>
+                            <button class="w-full py-2 border border-primary text-primary rounded-button hover:bg-primary/5 whitespace-nowrap font-medium">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <button class="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-button hover:bg-gray-50 whitespace-nowrap">
+                        View Full Calendar
+                        <i class="ri-calendar-line ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-primary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center text-white">
+                    <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Community?</h2>
+                    <p class="text-white/80 text-lg mb-8">Whether you're looking to start a business, expand your farm, or strengthen your cooperative, we're here to support your journey with financing, training, and resources.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 whitespace-nowrap">Apply for Funding</button>
+                        <button class="px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-button hover:bg-white/10 whitespace-nowrap">Contact an Advisor</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Stay Updated</h2>
+                    <p class="text-gray-600 mb-8">Subscribe to our newsletter for the latest news, events, and resources from the Microfinance Foundation.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                        <button class="px-6 py-3 bg-primary text-white font-medium rounded-button hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4">By subscribing, you agree to receive updates from our foundation. You can unsubscribe at any time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>
+                    <p class="text-gray-400 mb-6">Empowering communities through accessible financial services, education, and support in Kassala State.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-x-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Training Hub</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Microloans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Business Training</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cooperative Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Youth Programs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Women's Empowerment</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Agricultural Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mt-1 mr-3 text-primary"></i>
+                            <span class="text-gray-400">123 Main Street, Kassala City, Kassala State, Sudan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-3 text-primary"></i>
+                            <span class="text-gray-400">+249 123 456 789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-3 text-primary"></i>
+                            <span class="text-gray-400">info@microfinancefoundation.org</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-time-line mr-3 text-primary"></i>
+                            <span class="text-gray-400">Sun-Thu: 8:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Microfinance Foundation. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">Terms of Service</a>
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // News Carousel
+            const carousel = document.getElementById('news-carousel');
+            const prevBtn = document.getElementById('prev-news');
+            const nextBtn = document.getElementById('next-news');
+            let currentPosition = 0;
+            const itemWidth = 100 / 3; // 3 items visible at once on desktop
+            
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentPosition * itemWidth}%)`;
+            }
+            
+            prevBtn.addEventListener('click', function() {
+                if (currentPosition > 0) {
+                    currentPosition--;
+                    updateCarousel();
+                }
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                const maxPosition = document.querySelectorAll('#news-carousel > div').length - 3;
+                if (currentPosition < maxPosition) {
+                    currentPosition++;
+                    updateCarousel();
+                }
+            });
+            
+            // Responsive carousel adjustment
+            function adjustCarousel() {
+                if (window.innerWidth < 768) {
+                    // On mobile, show 1 item at a time
+                    Array.from(document.querySelectorAll('#news-carousel > div')).forEach(item => {
+                        item.style.width = '100%';
+                    });
+                } else {
+                    // On desktop, show 3 items
+                    Array.from(document.querySelectorAll('#news-carousel > div')).forEach(item => {
+                        item.style.width = '33.333%';
+                    });
+                }
+                currentPosition = 0;
+                updateCarousel();
+            }
+            
+            window.addEventListener('resize', adjustCarousel);
+            adjustCarousel();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Stats Counter Animation
+            function animateCounter(id, target, duration) {
+                const element = document.getElementById(id);
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+                
+                const timer = setInterval(function() {
+                    current += increment;
+                    const progress = Math.min(Math.round(current), target);
+                    element.textContent = progress.toLocaleString();
+                    
+                    if (progress >= target) {
+                        clearInterval(timer);
+                    }
+                }, 16);
+            }
+            
+            // Intersection Observer to trigger counter animation when in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter('counter-1', 5280, 2000);
+                        animateCounter('counter-2', 12750, 2000);
+                        animateCounter('counter-3', 425, 2000);
+                        animateCounter('counter-4', 87, 2000);
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.querySelector('.stats-counter'));
+        });
+    </script>
+</body>
+</html>
